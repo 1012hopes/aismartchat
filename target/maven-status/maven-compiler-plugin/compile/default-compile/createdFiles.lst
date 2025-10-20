@@ -1,0 +1,9 @@
+com\example\springaichat\controller\AIController.class
+com\example\springaichat\service\ChatService.class
+com\example\springaichat\controller\AIController$ChatRequest.class
+com\example\springaichat\config\ChatClientConfig.class
+com\example\springaichat\service\ChatService$ResponseCollector.class
+com\example\springaichat\config\EncodingConfig.class
+com\example\springaichat\config\WebMvcConfig.class
+com\example\springaichat\service\ChatService$ChatMessage.class
+com\example\springaichat\SpringAiChatApplication.class
