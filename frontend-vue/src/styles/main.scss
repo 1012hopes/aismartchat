@@ -1,0 +1,146 @@
+// Apple/OpenAI 风格主题颜色定义
+:root[data-theme="light"] {
+  // 背景色 - 纯白系统
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-tertiary: #e8e8ed;
+  --surface-elevated: #ffffff;
+  
+  // 文字颜色
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary: #b0b0b5;
+  
+  // 边框和分隔线
+  --border-color: rgba(0, 0, 0, 0.08);
+  --divider-color: rgba(0, 0, 0, 0.05);
+  
+  // 交互颜色
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --active-bg: rgba(0, 0, 0, 0.08);
+  
+  // 侧边栏
+  --sidebar-bg: #f5f5f7;
+  
+  // 消息气泡
+  --user-bubble-bg: #0066ff;
+  --user-bubble-text: #ffffff;
+  --ai-bubble-bg: #f5f5f7;
+  --ai-bubble-text: #1d1d1f;
+  
+  // 主题色 - 科技蓝
+  --accent-color: #0066ff;
+  --accent-hover: #0055d4;
+  --accent-light: rgba(0, 102, 255, 0.1);
+  
+  // 状态色
+  --success-color: #34c759;
+  --error-color: #ff3b30;
+  --warning-color: #ff9500;
+  
+  // 阴影
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme="dark"] {
+  // 背景色 - 深灰系统
+  --bg-primary: #1d1d1f;
+  --bg-secondary: #2c2c2e;
+  --bg-tertiary: #3a3a3c;
+  --surface-elevated: #2c2c2e;
+  
+  // 文字颜色
+  --text-primary: #f5f5f7;
+  --text-secondary: #98989d;
+  --text-tertiary: #636366;
+  
+  // 边框和分隔线
+  --border-color: rgba(255, 255, 255, 0.12);
+  --divider-color: rgba(255, 255, 255, 0.08);
+  
+  // 交互颜色
+  --hover-bg: rgba(255, 255, 255, 0.06);
+  --active-bg: rgba(255, 255, 255, 0.12);
+  
+  // 侧边栏
+  --sidebar-bg: #2c2c2e;
+  
+  // 消息气泡
+  --user-bubble-bg: #0a84ff;
+  --user-bubble-text: #ffffff;
+  --ai-bubble-bg: #2c2c2e;
+  --ai-bubble-text: #f5f5f7;
+  
+  // 主题色 - 科技蓝（深色模式调亮）
+  --accent-color: #0a84ff;
+  --accent-hover: #409cff;
+  --accent-light: rgba(10, 132, 255, 0.15);
+  
+  // 状态色
+  --success-color: #32d74b;
+  --error-color: #ff453a;
+  --warning-color: #ff9f0a;
+  
+  // 阴影（深色模式用更深的阴影）
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+// 系统字体栈 - Apple/SF Pro 风格
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+// Toast消息 - 现代设计
+.toast-message {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10000;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+  
+  &.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--text-secondary);
+  }
+}
+
